@@ -17,3 +17,83 @@ body,
 body {
   color: white;
 }
+
+.hero-wrapper {
+  height: 500vh;
+  position: relative;
+}
+
+.hero-sticky {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.hero-content {
+  text-align: center;
+}
+
+
+.subtitle {
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+
+.hero-content h1 {
+  font-size: clamp(4rem, 15vw, 15rem);
+  font-weight: 900;
+  line-height: .9;
+}
+
+
+.hero-content button {
+  margin-top: 40px;
+
+  padding: 15px 40px;
+  border-radius: 50px;
+
+  border: none;
+  background: white;
+  color: black;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.scroll {
+  text-align: center;
+  opacity: .7;
+}
