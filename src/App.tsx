@@ -1,10 +1,8 @@
-import Hero from "./sections/Hero";
-
 function App() {
   return (
-    <main>
-      <Hero />
-    </main>
+    <h1 style={{color:"black"}}>
+      Steakhouse Test
+    </h1>
   );
 }
 
