@@ -1,8 +1,8 @@
 function App() {
   return (
-    <h1 style={{color:"black"}}>
-      Steakhouse Test
-    </h1>
+    <div style={{ color: "black", background: "white" }}>
+      <h1>Hello Steakhouse</h1>
+    </div>
   );
 }
 
