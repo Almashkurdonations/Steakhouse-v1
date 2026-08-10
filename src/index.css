@@ -10,90 +10,68 @@ body,
   width: 100%;
   min-height: 100%;
   background: #0c0c0c;
-  font-family: "Arial", sans-serif;
-  overflow-x: clip;
-}
-
-body {
   color: white;
+  font-family: Arial, sans-serif;
 }
 
-.hero-wrapper {
-  height: 500vh;
-  position: relative;
-}
-
-.hero-sticky {
+.hero {
   height: 100vh;
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.7)
+    );
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  padding: 30px;
+  padding: 40px;
 }
 
-
-.navbar {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  text-transform: uppercase;
-  letter-spacing: 3px;
 }
 
+nav h2 {
+  font-size: 24px;
+  letter-spacing: 5px;
+}
 
-.nav-links {
+nav div {
   display: flex;
   gap: 30px;
 }
 
-
-.nav-links a {
+nav a {
   color: white;
-  text-decoration: none;
 }
-
 
 .hero-content {
   text-align: center;
 }
 
-
-.subtitle {
-  font-size: 20px;
+.hero-content p {
   letter-spacing: 5px;
   text-transform: uppercase;
 }
 
-
 .hero-content h1 {
-  font-size: clamp(4rem, 15vw, 15rem);
+  font-size: clamp(70px, 15vw, 220px);
+  line-height: 0.85;
   font-weight: 900;
-  line-height: .9;
 }
 
-
-.hero-content button {
+button {
   margin-top: 40px;
-
-  padding: 15px 40px;
+  padding: 16px 40px;
   border-radius: 50px;
-
-  border: none;
-  background: white;
-  color: black;
-
-  font-size: 16px;
-  cursor: pointer;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
 }
-
 
 .scroll {
   text-align: center;
-  opacity: .7;
+  opacity: 0.7;
 }
