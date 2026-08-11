@@ -1,4 +1,4 @@
-import Hero from "./sections/Hero.tsx";
+import Hero from "./Sections/Hero.tsx";
 
 function App() {
   return (
