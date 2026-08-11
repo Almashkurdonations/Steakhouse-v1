@@ -52,11 +52,7 @@ body,
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.75)
-    );
+  background: transparent;
 }
 
 
@@ -106,7 +102,7 @@ body,
   opacity: 0.8;
 }
 
-
+p
 .hero-content h1 {
   font-size: clamp(70px, 15vw, 220px);
   line-height: 0.85;
