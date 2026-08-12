@@ -82,15 +82,17 @@ function Hero() {
       <div className="hero-sticky">
 
 
-        <video
-          ref={videoRef}
-          className="hero-video"
-          src="Public/videos/hero-video.mp4"
-          muted
-          playsInline
-          preload="auto"
-        />
-
+    <video
+  src="/videos/hero-video.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  style={{
+    width:"500px",
+    height:"300px"
+  }}
+/>
 
         <div className="overlay" />
 
