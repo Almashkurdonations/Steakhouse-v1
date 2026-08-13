@@ -1,156 +1,67 @@
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import "../Styles/Hero.css";
 
-
-function Hero() {
-
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-
-  useEffect(() => {
-
-    const video = videoRef.current;
-
-    if (!video) return;
-
-
-    const handleScroll = () => {
-
-      const section = document.querySelector(
-        ".hero-wrapper"
-      ) as HTMLElement;
-
-
-      if (!section) return;
-
-
-      const scrollTop = window.scrollY;
-
-      const sectionTop = section.offsetTop;
-
-      const sectionHeight = section.offsetHeight;
-
-
-      const scrollProgress =
-        (scrollTop - sectionTop) /
-        (sectionHeight - window.innerHeight);
-
-
-      const clampedProgress = Math.min(
-        Math.max(scrollProgress, 0),
-        1
-      );
-
-
-      if (video.duration) {
-
-        video.currentTime =
-          clampedProgress * video.duration;
-
-      }
-
-    };
-
-
-    video.pause();
-
-
-    window.addEventListener(
-      "scroll",
-      handleScroll
-    );
-
-
-    return () => {
-
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
-
-    };
-
-
-  }, []);
-
-
-
+const Hero = () => {
   return (
+    <section className="hero">
 
-    <section className="hero-wrapper">
+      <div className="hero-background"></div>
 
+      <div className="hero-overlay"></div>
 
-      <div className="hero-sticky">
+      <div className="hero-content">
 
-
-    <video
-  src="/videos/hero-video.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-  style={{
-    width:"500px",
-    height:"300px"
-  }}
-/>
-
-        <div className="overlay" />
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Premium Dining Experience
+        </motion.p>
 
 
-        <nav className="navbar">
-
-          <h2>
-            STEAKHOUSE
-          </h2>
-
-
-          <div className="nav-links">
-
-            <a>Menu</a>
-            <a>Story</a>
-            <a>Reserve</a>
-
-          </div>
-
-        </nav>
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          STEAKHOUSE
+        </motion.h1>
 
 
-
-        <div className="hero-content">
-
-          <p>
-            Premium Dining Experience
-          </p>
-
-
-          <h1>
-            THE
-            <br />
-            STEAKHOUSE
-          </h1>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
+          Wood Fired • Abuja
+        </motion.span>
 
 
-          <button>
-            Reserve Table
-          </button>
-
-        </div>
-
-
-
-        <div className="scroll">
-          Scroll
-        </div>
-
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1 }}
+        >
+          Reserve A Table
+        </motion.button>
 
       </div>
 
 
+      <motion.div
+        className="scroll-indicator"
+        animate={{ y: [0, 10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 2
+        }}
+      >
+        Scroll
+      </motion.div>
+
     </section>
-
   );
-
-}
-
+};
 
 export default Hero;
